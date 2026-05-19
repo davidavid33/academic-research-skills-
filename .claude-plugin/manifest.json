@@ -1,0 +1,28 @@
+{
+  "name": "academic-research-skills",
+  "version": "3.9.4.1",
+  "description": "Comprehensive academic research suite: research → write → review → revise → finalize",
+  "author": "Cheng-I Wu",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/Imbad0202/academic-research-skills",
+  "skills": [
+    "deep-research",
+    "academic-paper",
+    "academic-paper-reviewer",
+    "academic-pipeline"
+  ],
+  "commands": [
+    "ars-full",
+    "ars-plan",
+    "ars-outline",
+    "ars-revision",
+    "ars-revision-coach",
+    "ars-abstract",
+    "ars-lit-review",
+    "ars-citation-check",
+    "ars-format-convert",
+    "ars-disclosure"
+  ],
+  "min_claude_code_version": "1.0.0",
+  "tags": ["academic", "research", "writing", "peer-review", "citations"]
+}
