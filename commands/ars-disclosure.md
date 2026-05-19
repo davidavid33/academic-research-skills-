@@ -1,50 +1,16 @@
-# /ars-disclosure
+---
+description: Venue-specific AI-usage disclosure statement
+model: sonnet
+---
 
-Triggers the `academic-paper` skill in `disclosure` mode.
+Invoke: `academic-paper` skill, mode: `disclosure`
 
-**What it does:** Generates a venue-specific AI-usage disclosure statement.
+Argument `$ARGUMENTS` is the venue name (e.g. NeurIPS, Nature).
+If no argument, ask for venue name.
 
-**Model:** Sonnet
+Supported venues: ICLR · NeurIPS · Nature · Science · ACL · EMNLP
+For unlisted venues: ask user to paste the venue's AI policy.
 
-**Fidelity spectrum:** Low oversight
+Ask: how was AI used? (research, drafting, citation verification, editing — select all that apply)
 
-## Usage
-
-```
-/ars-disclosure <venue name>
-```
-
-## Example
-
-```
-/ars-disclosure NeurIPS
-```
-
-## Supported Venues
-
-| Venue | Policy Type |
-|-------|------------|
-| ICLR | Conference (ML) |
-| NeurIPS | Conference (ML) |
-| Nature | Journal (multidisciplinary) |
-| Science | Journal (multidisciplinary) |
-| ACL | Conference (NLP) |
-| EMNLP | Conference (NLP) |
-
-For venues not listed, provide the venue's AI disclosure policy and the statement will be generated to match.
-
-## Input required
-
-- Target venue
-- Description of how AI was used (research assistance, drafting, citation verification, etc.)
-- Author names (for attribution statement)
-
-## Output
-
-- Formatted disclosure statement matching venue requirements
-- Placement recommendation (acknowledgements, methods, or footnote)
-
-## Notes
-
-- Disclosure is mandatory for all ARS pipeline outputs
-- See: `MODE_REGISTRY.md` § academic-paper | `academic-paper/SKILL.md`
+Output: formatted disclosure statement + placement recommendation (acknowledgements / methods / footnote).

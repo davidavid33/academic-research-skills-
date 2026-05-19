@@ -1,35 +1,16 @@
-# /ars-revision
+---
+description: Revise manuscript based on reviewer feedback
+model: sonnet
+---
 
-Triggers the `academic-paper` skill in `revision` mode.
+Invoke: `academic-paper` skill, mode: `revision`
 
-**What it does:** Generates a revised manuscript draft and point-by-point responses to reviewer feedback.
+Ask user to provide:
+1. Original manuscript
+2. Reviewer comments (structured or raw)
+3. Editorial decision letter (optional)
 
-**Model:** Sonnet
+If reviewer comments are unstructured and lengthy, suggest running /ars-revision-coach first.
 
-**Fidelity spectrum:** High fidelity
-
-## Usage
-
-```
-/ars-revision
-```
-
-Paste your draft and reviewer comments when prompted.
-
-## Input required
-
-1. Original manuscript (Markdown, plain text, or DOCX content)
-2. Reviewer comments (structured or unstructured)
-3. Editorial decision letter (optional but recommended)
-
-## Output
-
-- Revised manuscript draft with tracked changes (Markdown diff format)
-- Point-by-point Response Letter addressing each reviewer concern
-- R&R Traceability Matrix (links each revision to the reviewer comment it addresses)
-
-## Notes
-
-- For unstructured reviewer comments, use `/ars-revision-coach` first to generate a Revision Roadmap
-- Maximum one RE-REVISE round after Major Revision decision
-- See: `MODE_REGISTRY.md` § academic-paper | `academic-paper/SKILL.md`
+Execute Phase 7 from academic-paper/SKILL.md.
+Output: revised draft (Markdown diff) + Response Letter + R&R Traceability Matrix.

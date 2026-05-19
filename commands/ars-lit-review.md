@@ -1,35 +1,15 @@
-# /ars-lit-review
+---
+description: Annotated bibliography rendered as literature review section
+model: sonnet
+---
 
-Triggers the `academic-paper` skill in `lit-review` mode.
+Invoke: `academic-paper` skill, mode: `lit-review`
 
-**What it does:** Produces an annotated bibliography rendered as a literature review section.
+Argument `$ARGUMENTS` is the topic or a list of sources.
 
-**Model:** Sonnet
+Note: for upstream investigation (bibliography + synthesis), use deep-research lit-review mode instead.
+This mode targets writing-phase literature integration only.
 
-**Fidelity spectrum:** Medium oversight
-
-## Usage
-
-```
-/ars-lit-review <topic or list of sources>
-```
-
-## Example
-
-```
-/ars-lit-review Cognitive load theory in multimedia learning environments
-```
-
-## Output
-
-- Prose literature review section (not just a list)
-- Annotated bibliography with source grading
-- Thematic organization with synthesis across sources
-- Identified research gaps
-
-## Notes
-
-- For upstream research-phase literature reviews requiring annotated bibliography + synthesis analysis, prefer `deep-research` skill in `lit-review` mode instead
-- This mode targets writing-phase integration of literature, not investigation
-- All citations verified via DOI/WebSearch
-- See: `MODE_REGISTRY.md` § academic-paper | `academic-paper/SKILL.md`
+Execute Phase 1 from academic-paper/SKILL.md.
+Verify all citations per shared/RULES.md before output.
+Output: prose literature review + annotated bibliography + thematic organization + gap list.

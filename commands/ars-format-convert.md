@@ -1,40 +1,14 @@
-# /ars-format-convert
+---
+description: Convert paper between formats and/or citation styles
+model: sonnet
+---
 
-Triggers the `academic-paper` skill in `format-convert` mode.
+Invoke: `academic-paper` skill, mode: `format-convert`
 
-**What it does:** Converts academic papers between formats and citation styles.
+Ask for: source format, target format, citation style (if changing).
 
-**Model:** Sonnet
+Supported formats: Markdown · DOCX (Pandoc) · LaTeX (APA7) · PDF (tectonic)
+Supported citation styles: APA 7.0 · Chicago · MLA · IEEE · Vancouver
 
-**Fidelity spectrum:** Low oversight
-
-## Usage
-
-```
-/ars-format-convert
-```
-
-Specify source format, target format, and citation style when prompted.
-
-## Supported Conversions
-
-### Document Formats
-| From | To | Tool |
-|------|----|----|
-| Markdown | DOCX | Pandoc |
-| Markdown | LaTeX | Direct |
-| Markdown | PDF | tectonic |
-| LaTeX | DOCX | Pandoc |
-| LaTeX | PDF | tectonic |
-| DOCX | Markdown | Pandoc |
-
-### Citation Styles
-APA 7.0 ↔ Chicago ↔ MLA ↔ IEEE ↔ Vancouver
-
-## Notes
-
-- Requires Pandoc for DOCX output
-- Requires tectonic for PDF output
-- LaTeX output uses APA7 document class by default
-- Citation style conversion preserves all metadata; formatting only changes
-- See: `MODE_REGISTRY.md` § academic-paper | `academic-paper/SKILL.md`
+Execute Phase 8 from academic-paper/SKILL.md.
+Note external dependencies: Pandoc required for DOCX; tectonic required for PDF.

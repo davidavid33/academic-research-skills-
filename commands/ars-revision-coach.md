@@ -1,40 +1,15 @@
-# /ars-revision-coach
+---
+description: Parse reviewer comments → Revision Roadmap + Response Letter skeleton
+model: opus
+---
 
-Triggers the `academic-paper` skill in `revision-coach` mode.
+Invoke: `academic-paper` skill, mode: `revision-coach`
 
-**What it does:** Parses reviewer comments and produces a Revision Roadmap plus a Response Letter skeleton — without writing the revision itself.
+Ask user to paste reviewer comments and editorial decision letter (optional).
 
-**Model:** Opus (per project policy)
+Execute revision_coach_agent from academic-paper/SKILL.md.
+Output:
+  1. Revision Roadmap sorted by Priority (Critical/Major/Minor) × Theme
+  2. Response Letter Skeleton with placeholder per concern
 
-**Fidelity spectrum:** Balanced, medium oversight
-
-## Usage
-
-```
-/ars-revision-coach
-```
-
-Paste reviewer comments when prompted.
-
-## Input required
-
-- Reviewer comments (any format: structured review, inline comments, email feedback)
-- Editorial decision letter (optional)
-
-## Output
-
-1. **Revision Roadmap** — feedback organized by:
-   - Priority (Critical / Major / Minor)
-   - Theme (Methodology / Literature / Clarity / Structure / Other)
-   - Action required for each concern
-
-2. **Response Letter Skeleton** — pre-structured template with:
-   - Placeholder for each reviewer concern
-   - Suggested response framing
-   - Cross-reference markers for manuscript changes
-
-## Notes
-
-- Does NOT write the revision — use `/ars-revision` for that
-- Ideal when reviewer comments are long, overlapping, or contradictory
-- See: `MODE_REGISTRY.md` § academic-paper | `academic-paper/SKILL.md`
+Do NOT write the revision. Direct user to /ars-revision for that.
